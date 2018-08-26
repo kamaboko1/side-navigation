@@ -1,0 +1,140 @@
+* { -webkit-box-sizing: border-box; box-sizing: border-box }
+body {
+    position: relative;
+}
+
+h1 {
+    font-family: $ff-ss;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    cursor: pointer;
+   
+  }
+  
+  .btn-line {
+    margin: 4px;
+    height: 4px;
+    width: 30px;
+    visibility: visible;
+    background: black;
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s; 
+  }
+
+  .menu-btn.close .btn-line:nth-child(1){
+    -webkit-transform:translate(0px, 8px);
+        -ms-transform:translate(0px, 8px);
+            transform:translate(0px, 8px);
+     visibility: hidden;
+     
+  }
+
+  .menu-btn.close .btn-line:nth-child(3){
+    -webkit-transform: translate(0px, -8px);
+        -ms-transform: translate(0px, -8px);
+            transform: translate(0px, -8px);
+    visibility: hidden;
+  }
+
+  .nav {
+    position: fixed;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+   margin-top: 20%;
+   right: 10px;
+  
+} 
+
+.nav a{
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: right;
+}
+
+.nav a:nth-child(1){
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all, .3s, ease-in-out);
+  }
+
+  .nav a:nth-child(2){
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all, .4s, ease-in-out);
+  }
+
+  .nav a:nth-child(3){
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all, .5s, ease-in-out);
+  }
+
+  .nav a:nth-child(4){
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all, .6s, ease-in-out);
+  }
+  .nav a:nth-child(5){
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all, .7s, ease-in-out);
+  }
+
+
+ .nav.open a:nth-child(1){
+     color: red;
+     visibility: visible;
+     opacity: 1;
+     @include translateX(-30px);
+ }
+
+ .nav.open a:nth-child(2){
+    color: red;
+    visibility: visible;
+    opacity: 1;
+    @include translateX(-30px);
+}
+
+.nav.open a:nth-child(3){
+    color: red;
+    visibility: visible;
+    opacity: 1;
+    @include translateX(-30px);
+}
+
+.nav.open a:nth-child(4){
+    color: red;
+    visibility: visible;
+    opacity: 1;
+    @include translateX(-30px);
+}
+
+.nav.open a:nth-child(5){
+    color: red;
+    visibility: visible;
+    opacity: 1;
+    @include translateX(-30px);
+}
+
+.nav.open a:hover {
+    color: lightblue;
+    @include transition(all, ease-in-out, .2s);
+}
+
+.text {
+    width: 70%;
+    margin: 0 auto;
+}
+

@@ -1,0 +1,14 @@
+@mixin transition($what: all, $time: .2s, $how: ease-in-out){
+    -webkit-transition: $what $time $how;
+    -o-transition: $what $time $how;
+    transition: $what $time $how;
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+        -ms-transform: $transform;
+            transform: $transform;
+}
+@mixin translateX($x){
+    @include transform(translateX($x));
+}
